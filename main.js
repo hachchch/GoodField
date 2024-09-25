@@ -751,7 +751,7 @@ function turnEnd(p){
     connection.send(`進行:${p}`);
 }
 async function setMyId(){
-    await timer(1);
+    await timer(4);
     mynp=players.length-1;
     console.log(players);
     players[players.findIndex((e)=>e.name==playerName.value)].id=mynp;
