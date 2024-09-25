@@ -20,6 +20,7 @@ var np=0;
 var myturn=false;
 var remnp=0;
 var attack=0;
+var isHost=false;
 var defence=0;
 var attacked=false;
 var start=false;
@@ -616,6 +617,9 @@ connection.addEventListener("message", (event) => {
         }
     if(event.data.indexOf("接続:")==0){
         connection.send(`確認:${playerName.value}|${mynp}`);
+        if(players.length==1){
+        isHost=true;
+        }
     }
     if(event.data.indexOf("確認:")==0){
         if(players.findIndex((e)=>e.name==event.data.substring(3,event.data.indexOf("|")))==-1){
@@ -642,7 +646,8 @@ connection.addEventListener("message", (event) => {
     if(event.data.indexOf("ゲーム:")==0){
         if(event.data.substring(4)=="始まった。"){
         document.querySelector(".startButton").innerHTML="";
-        if(mynp==0){
+        if(isHost===true){
+            mynp=players[players.findIndex((e)=>e.name==playerName.value)].id;
             myturn=true;
             for(let k=0; k<players.length; ++k){
         organizeDeck(k);
@@ -659,9 +664,14 @@ connection.addEventListener("message", (event) => {
         if(np==mynp){
         randomTarget();
     }
-            if(mynp==0){
-            exchangePlayerInformation();
+        if(isHost===true){
+            let r=0;
+            for(const p of players){
+                p.id=r;
+                r++;
             }
+            exchangePlayerInformation();
+        }
     }
         }
     if(event.data.indexOf("ダメージ:")==0){
@@ -684,6 +694,7 @@ connection.addEventListener("message", (event) => {
     }
     if(event.data.indexOf("プレイヤー情報:")==0){
         players=eval(event.data.substring(8));
+        mynp=players[players.findIndex((e)=>e.name==playerName.value)].id;
     }
     if(event.data.indexOf("デッキ情報:")==0){
         decks=eval(event.data.substring(6));
@@ -727,9 +738,9 @@ function turnEnd(p){
         }
     for(const p of players){
         if(p.status.indexOf("毒")!=-1){
-            p.hp+=(-1)*3;
+            damage(-2,p.id);
             if(p.id==mynp){
-                popTexts.push({value:`3ダメージ！`,x:200,y:150,interval:0,color:"#ff0000"});
+                popTexts.push({value:`2ダメージ！`,x:200,y:150,interval:0,color:"#ff0000"});
             }
         }
         if(p.money<0){
@@ -750,11 +761,10 @@ function turnEnd(p){
     exchangeDeckInformation();
     connection.send(`進行:${p}`);
 }
-async function setMyId(){
-    await timer(4);
+function setMyId(){
     mynp=players.length-1;
     console.log(players);
-    players[players.findIndex((e)=>e.name==playerName.value)].id=mynp;
+    //players[players.findIndex((e)=>e.name==playerName.value)].id=mynp;
     connection.send(`確認:${playerName.value}|${mynp}`);
 }
 function timer(t){
@@ -821,27 +831,10 @@ async function excute(){
         if(calc>0){
             calc=0;
         }
-        if(players[np].status.indexOf("呪い")!=-1){
-            clac=calc*2;
-        }
         connection.send("こうげき:0");
         connection.send("ダメージ:"+calc);
         defence=0;
-        let i=-1;
-        for(let k=0; k<players[np].status.length; ++k){
-            if(players[np].status[k].indexOf("安保|")!=-1){
-                i=k;
-                }
-        }
-        if(i!=-1){
-            let own=players[np].status[i].substring(3);
-            players[np].money+=calc;
-            if(own!=players[np].name){
-                players[players.findIndex((e)=>e.name==own)].money+=(-1)*calc;
-                }
-            }else{
-            players[np].hp+=calc;
-        }
+        damage(calc,np);
         myturn=false;
         await timer(1.25);
         turnEnd(remnp);
@@ -874,6 +867,7 @@ function deleteDeck(index){
     decks.length=decks.copyWithin(index,index+1).length-1;
 }
 function deckWork(){
+    sound("select");
     for(const d of decks){
         if(d.status=="選択中"){
         if(d.effect=="MP回復"){
@@ -1019,7 +1013,7 @@ function deckWork(){
                 if(p.id==np){
                     p.hp+=(-1)*999999;
                 }else{
-                    p.hp+=(-1)*45;
+                    damage(-45,p.id);
                 }
                 }
             }
@@ -1059,7 +1053,7 @@ function deckWork(){
                 pt("5ダメージ！","#ff0000");
                 for(const p of players){
                     if(p.id!=np){
-                    p.hp+=(-1)*5;
+                    damage(-5,p.id);
                     }
                 }
             }
@@ -1120,6 +1114,27 @@ function testDeads(){
         }
     }
     return d;
+}
+function damage(x,p){
+    if(players[p].status.indexOf("呪い")!=-1){
+        x+=x;
+    }
+    let i=-1;
+    let index=0;
+    for(const u of players[p].status){
+        if(u.indexOf("安保|")!=-1){
+            i=index;
+        }
+        index++;
+    }
+    if(i!=-1){
+    players[p].money+=x;
+        }else{
+    players[p].hp+=x;
+        }
+    if(players[p].hp<0){
+        players[p].hp=0;
+        }
 }
 function restartGame(){
     for(const p of players){
