@@ -57,75 +57,94 @@ cards.push({
 cardAdd("伝説の剣",30,25,1,"攻撃","");
 cardAdd("伝説の魔剣",16,15,1,"攻撃","闇");
 cardAdd("スパイ衛星",0,30,1,"自分以外の全員のデッキを開示する","");
-cardAdd("透視メガネ",0,10,1,"一時的に相手のデッキを開示する","");
+cardAdd("透視メガネ",0,10,100,"一時的に相手のデッキを開示する","");
 //cardAdd("買う",0,5,5,"買う","");
 //cardAdd("売る",0,5,5,"売る","");
 //cardAdd("両替",0,5,5,"両替","");
 cardAdd("馬券",0,9,3,"50%の確率で10円失い、50%の確率で10円手に入れる。","");
 cardAdd("レインコート",0,12,1,"水属性を完全に防ぐ","水");
-cardAdd("鉄の鎧",12,8,5,"防御","");
-cardAdd("鉄の兜",8,8,5,"防御","");
-cardAdd("鉄の靴",4,8,5,"防御","");
-cardAdd("鉄の小手",3,8,5,"防御","");
-cardAdd("金の鎧",24,16,10,"防御","");
-cardAdd("金の兜",16,16,10,"防御","");
-cardAdd("金の靴",8,16,10,"防御","");
-cardAdd("金の小手",6,16,10,"防御","");
+cardAdd("鉄の鎧",12,8,3,"防御","");
+cardAdd("鉄の兜",8,8,3,"防御","");
+cardAdd("鉄の靴",4,8,3,"防御","");
+cardAdd("鉄の小手",3,8,3,"防御","");
+cardAdd("金の鎧",24,16,1,"防御","");
+cardAdd("金の兜",16,16,1,"防御","");
+cardAdd("金の靴",8,16,1,"防御","");
+cardAdd("金の小手",6,16,1,"防御","");
+cardAdd("白銀の鎧",32,16,1,"防御","");
+cardAdd("白銀の兜",20,16,1,"防御","");
+cardAdd("白銀の靴",12,16,1,"防御","");
+cardAdd("白銀の小手",10,16,10,"防御","");
+cardAdd("呪いの鎧",12,16,1,"防御","闇");
+cardAdd("呪いの兜",8,16,1,"防御","闇");
+cardAdd("呪いの靴",4,16,1,"防御","闇");
+cardAdd("呪いの小手",3,16,1,"防御","闇");
+cardAdd("ゴリラテープ",5,5,3,"防御","水");
+cardAdd("おめん",2,5,3,"防御","");
+cardAdd("星のベール",8,6,5,"防御","光");
+cardAdd("ひやけどめ",2,7,5,"防御","火");
+cardAdd("太陽神の御守り",6,5,3,"防御","火");
 cardAdd("鎖かたびら",10,8,5,"防御","");
 cardAdd("革の服",8,8,5,"防御","");
-cardAdd("革の手袋",2,8,5,"防御","");
-cardAdd("金の小手",6,8,5,"防御","");
-cardAdd("金の時計",0,8,5,"所持金を全て消費して、手札を所持金÷5の分追加する。(手札の上限は16枚)","");
-cardAdd("忘却",0,8,5,"手札を3枚捨てる","");
-cardAdd("盾",5,8,5,"防御","");
-cardAdd("毒キノコ",0,8,5,"毒を与える","");
-cardAdd("解毒薬",0,8,5,"毒を治す","");
-cardAdd("星の歌",0,5,5,"5mp消費で夢を見せる","");
-cardAdd("ファイアーボール",2,2,5,"魔法","火");
+cardAdd("革の手袋",2,8,3,"防御","");
+cardAdd("金の小手",6,8,3,"防御","");
+cardAdd("金の時計",0,8,2,"所持金を全て消費して、手札を所持金÷5の分追加する。(手札の上限は16枚)","");
+cardAdd("忘却",0,8,1,"手札を3枚捨てる","");
+cardAdd("盾",5,8,3,"防御","");
+cardAdd("毒キノコ",0,8,3,"毒を与える","");
+cardAdd("解毒薬",0,8,3,"毒を治す","");
+cardAdd("星の歌",0,5,1,"5mp消費で夢を見せる","");
+cardAdd("ファイアーボール",2,2,1,"魔法","火");
+cardAdd("大波",8,10,1,"魔法","水");
+cardAdd("大岩",10,13,1,"魔法","石");
+cardAdd("焼夷弾",10,10,1,"追加","火");
+cardAdd("ガンマ線バースト",20,30,1,"魔法","光");
+cardAdd("大波",8,10,1,"魔法","水");
+cardAdd("大波",8,10,1,"魔法","水");
 cardAdd("爆炎神竜セット",15,0,1,"防御","火");
 cardAdd("戦術核",15,25,1,"攻撃","光");
 cardAdd("ペンより強い剣",5,2,1,"攻撃","光");
 cardAdd("アメジストのかけら",5,2,1,"攻撃","");
-cardAdd("アポロンの琴",10,2,1,"回復","");
+cardAdd("アポロンの琴",10,2,1,"MP回復","");
 cardAdd("回復薬グレート",15,2,1,"回復","");
-cardAdd("飴玉",5,2,1,"回復","");
-cardAdd("抗生物質",0,2,1,"状態異常を治す","");
+cardAdd("ふわふわわた菓子",30,2,1,"回復","");
+cardAdd("抗生物質",0,2,2,"状態異常を治す","");
 cardAdd("金の玉",3,7,1,"追加","光");
-cardAdd("徴税",0,7,1,"他人の財産の半分を絞りとる。相手の財産が多ければ多いほどたくさん取れる。","闇");
+cardAdd("徴税",0,7,2,"他人の財産の半分を絞りとる。相手の財産が多ければ多いほどたくさん取れる。","闇");
 cardAdd("呪い",0,7,1,"呪いにかかった相手は2倍のダメージを食らうようになる。","");
 cardAdd("安保条約",0,7,1,"攻撃を必ず防御してくれるが、その分お金で取られる。相手に使った場合は自分に払われる。","");
-cardAdd("むち",2,3,4,"攻撃","");
-cardAdd("邪剣夜",5,3,4,"攻撃","闇");
-cardAdd("とんぼぎり",12,3,4,"攻撃","");
-cardAdd("ジェットソード",8,3,4,"攻撃","");
-cardAdd("太陽の剣",9,3,4,"攻撃","火");
-cardAdd("半導体レーザー",1,3,4,"追加","光");
-cardAdd("テラフォーミング",2,3,4,"手札を二枚増やす。(手札の上限は16枚)","");
-cardAdd("アナルアサシン",8,3,4,"攻撃","");
-cardAdd("へそくり",0,3,4,"お金が10増える","");
-cardAdd("レットブル",15,3,4,"MP回復","");
+cardAdd("むち",2,3,2,"攻撃","");
+cardAdd("邪剣夜",5,3,1,"攻撃","闇");
+cardAdd("とんぼぎり",12,3,1,"攻撃","");
+cardAdd("ジェットソード",8,3,1,"攻撃","");
+cardAdd("太陽の剣",9,3,1,"攻撃","火");
+cardAdd("半導体レーザー",1,3,2,"追加","光");
+cardAdd("テラフォーミング",2,3,6,"手札を二枚増やす。(手札の上限は16枚)","");
+cardAdd("アナルアサシン",8,3,2,"攻撃","");
+cardAdd("へそくり",0,3,3,"お金が10増える","");
+cardAdd("レットブル",30,5,1,"MP回復","");
 cardAdd("潮だまり",5,3,4,"攻撃","水");
 cardAdd("脊椎剣",5,3,4,"攻撃","");
 cardAdd("ゴルフバット",14,3,4,"攻撃","");
 cardAdd("日本刀",12,3,4,"攻撃","");
 cardAdd("危ないフラスコ",3,3,4,"追加","闇");
-cardAdd("ピカピカサンゴ",15,3,4,"MP回復","");
-cardAdd("キラキラ方解石",10,3,4,"MP回復","");
+cardAdd("ピカピカサンゴ",15,3,5,"MP回復","");
+cardAdd("キラキラ方解石",10,3,5,"MP回復","");
 cardAdd("シェフの包丁",9,3,4,"攻撃","");
 cardAdd("真珠のネックレス",1,10,1,"防御","光");
-cardAdd("乾燥ワカメ",2,3,4,"回復","");
+cardAdd("乾燥ワカメ",5,3,15,"回復","");
 cardAdd("おやつ",7,3,4,"回復","");
 cardAdd("まな板",3,3,4,"防御","");
 cardAdd("亀の甲羅",12,3,4,"防御","");
 cardAdd("自爆",45,10,1,"自滅するが全員にダメージ","");
 cardAdd("散弾銃",5,3,4,"全体にダメージ、防御不能","");
 cardAdd("三角コーン",7,3,4,"防御","");
-cardAdd("石の槍",3,3,4,"攻撃","石");
-cardAdd("投石機",5,3,4,"追加","石");
+cardAdd("石の槍",3,3,1,"攻撃","石");
+cardAdd("投石機",5,3,1,"追加","石");
 cardAdd("トラックくん",19,3,1,"攻撃","");
 cardAdd("フライパン",2,3,1,"攻撃","");
 cardAdd("消火栓のホース",5,3,1,"攻撃","水");
-cardAdd("淫夢之一太刀",15,3,1,"攻撃","");
+cardAdd("淫夢之一太刀",25,3,1,"攻撃","");
 cardAdd("呪いのヒカマニ",0,3,1,"相手の名前を強制的にヒカマニ語録にする。いたずらの域をはるかに超えている","");
 cardAdd("淫夢の呪い",0,3,1,"相手の手札の数字が114514などでたらめな数字になる(手札の効果は変わらない)","");
 cardAdd("穴あけパンチ",7,3,4,"","");
@@ -133,19 +152,29 @@ cardAdd("弓矢",5,3,4,"追加","");
 cardAdd("火矢",5,3,4,"追加","火");
 cardAdd("しょうゆ",8,3,4,"MP回復","");
 cardAdd("味の素",3,3,4,"MP回復","");
-cardAdd("ひっさつパンチ",11,3,4,"攻撃","");
-cardAdd("鋭利なミシン針",5,3,4,"攻撃","");
-cardAdd("巡航ミサイル",15,3,4,"攻撃","");
+cardAdd("ひっさつパンチ",11,3,2,"攻撃","");
+cardAdd("鋭利なミシン針",5,3,1,"攻撃","");
+cardAdd("巡航ミサイル",15,3,1,"攻撃","");
 cardAdd("てつはう",3,3,4,"追加","");
-cardAdd("大砲",10,3,4,"追加","");
-cardAdd("榴弾砲",15,3,4,"追加","");
-cardAdd("パチパチパンチ",2,3,4,"攻撃","");
-cardAdd("一味唐辛子",1,3,5,"","火");
-cardAdd("七味唐辛子",7,3,5,"","火");
+cardAdd("大砲",6,3,1,"追加","");
+cardAdd("榴弾砲",7,3,1,"追加","");
+cardAdd("パチパチパンチ",2,3,1,"攻撃","");
+cardAdd("一味唐辛子",1,3,2,"","火");
+cardAdd("七味唐辛子",7,3,1,"","火");
 cardAdd("スーパーチャット",9,3,4,"1円投げ銭する。(何も帰ってこない)","火");
+function gacha(){
+    let array=[];
+    for(const c of cards){
+    for(let k=0; k<c.chance; ++k){
+    array.push(c.name);
+        }
+    }
+    let seed=array[Math.round(Math.random()*(array.length-1))];
+    return cards.findIndex((e)=>e.name==seed);
+}
 function organizeDeck(p){
     while(myDeckAmounts(p)<players[p].maxCards){
-    let seed=Math.round(Math.random()*(cards.length-1));
+    let seed=gacha();
     decks.push({
         owner:p,
         name:cards[seed].name,
@@ -189,8 +218,22 @@ function translate() {
             if(d.type==""){
             ctx.strokeStyle="#000000";
                 }
-            if(attacked===true && d.effect!="防御" && d.name!="レインコート"){
-                ctx.strokeStyle="#00000000";
+            if(attacked===true){
+                let enemyAttackType="";
+            if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="火")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="火")!=-1){
+                enemyAttackType="火";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="水")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="水")){
+                enemyAttackType="水";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="石")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="石")){
+                enemyAttackType="石";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="光")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="光")){
+                enemyAttackType="光";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="闇")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="闇")){
+                enemyAttackType="闇";
+            }
+                if(d.effect!="防御" || enemyAttackType!=d.type){
+                        ctx.strokeStyle="#00000000";
+                    }
                 }
             if(d.status=="選択中"){
                 ctx.fillStyle="gray";
@@ -396,6 +439,7 @@ function translate() {
             }
             ctx.strokeStyle="#000000";
             ctx.font = "22px serif";
+            ctx.textAlign = "left";
         }
     }
     ctx.beginPath();
@@ -403,7 +447,7 @@ function translate() {
     ctx.lineTo(1000,canvas.height);
     ctx.closePath();
     ctx.stroke();
-    ctx.fillText(`ターン${turn}`,1070,480);
+    ctx.fillText(`ターン${turn}`,1050,480);
     ctx.strokeRect(1050,500,200,50);
         if(players.length-testDeads()<=1){
             ctx.fillText("再起動",1070,525);
@@ -476,10 +520,10 @@ canvas.addEventListener("click",(e)=>{
             }else if(np==mynp && d.effect!="防御" && decks.findIndex((e)=>e.status=="選択中" && e.seed!=d.seed)==-1){
             sound("select");
             d.status="選択中";
-            if(d.effect=="回復" || d.effect=="MP回復"){
+            if(d.effect=="回復" || d.effect=="MP回復" || d.name=="テラフォーミング"){
                 target=np;
             }
-            if(d.effect=="攻撃" || d.effect=="追加"){
+            if(d.effect=="攻撃" || d.effect=="追加" || d.effect=="魔法"){
                 attack+=d.value;
                 if(target==mynp){
                 randomTarget();
@@ -495,16 +539,48 @@ canvas.addEventListener("click",(e)=>{
             d.status="選択中";
             }
         }else{
+            let enemyAttackType="";
+            if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="火")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="火")!=-1){
+                enemyAttackType="火";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="水")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="水")){
+                enemyAttackType="水";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="石")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="石")){
+                enemyAttackType="石";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="光")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="光")){
+                enemyAttackType="光";
+            }else if(decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type!="闇")==-1 && decks.findIndex((e)=>e.status=="選択中" && e.owner==remnp && e.type=="闇")){
+                enemyAttackType="闇";
+            }
             if(np==mynp && d.status=="選択中"){
                 sound("click");
             defence+=(-1)*d.value;
             d.status="待機";
-            }else if(np==mynp && d.effect=="防御"){
+            }else if(np==mynp && d.effect=="防御" && enemyAttackType==""){
+                sound("select");
+            d.status="選択中";
+                defence+=d.value;
+            }else if(np==mynp && d.effect=="防御" && d.type=="火" && enemyAttackType=="火"){
+                sound("select");
+            d.status="選択中";
+                defence+=d.value;
+            }else if(np==mynp && d.effect=="防御" && d.type=="水" && enemyAttackType=="水"){
+                sound("select");
+            d.status="選択中";
+                defence+=d.value;
+            }else if(np==mynp && d.effect=="防御" && d.type=="光" && enemyAttackType=="光"){
+                sound("select");
+            d.status="選択中";
+                defence+=d.value;
+            }else if(np==mynp && d.effect=="防御" && d.type=="闇" && enemyAttackType=="闇"){
+                sound("select");
+            d.status="選択中";
+                defence+=d.value;
+            }else if(np==mynp && d.effect=="防御" && d.type=="石" && enemyAttackType=="石"){
                 sound("select");
             d.status="選択中";
                 defence+=d.value;
             }
-            }
+        }
         if(players[mynp].status.indexOf("ホモ")!=-1){
                     let N=Math.round(Math.random()*5);
                     if(N==0){
@@ -581,9 +657,6 @@ connection.addEventListener("message", (event) => {
     if(event.data.indexOf("進行:")==0){
         turn++;
         connection.send(`${np}の行動が終了。`);
-        if(players[np].status.indexOf("開示(一時的)")!=-1){
-            deleteDisiese(np,players[np].status.indexOf("開示(一時的)"));
-        }
         np=parseInt(event.data.substring(3))+1;
         if(np>players.length-1){
             np=0;
@@ -730,11 +803,18 @@ function gameStart(){
 }
 /*ターン終了*/
 function turnEnd(p){
+    if(players[np].status.indexOf("開示(一時的)")!=-1){
+            deleteDisiese(np,players[np].status.indexOf("開示(一時的)"));
+        }
     defence=0;
     attack=0;
     while(decks.findIndex((e)=>e.status=="選択中")!=-1){
         let index=decks.findIndex((e)=>e.status=="選択中");
+        if(decks[index].effect=="魔法"){
+            decks[index].status="待機";
+            }else{
         deleteDeck(index);
+            }
         }
     for(const p of players){
         if(p.status.indexOf("毒")!=-1){
@@ -808,11 +888,23 @@ async function excute(){
     exchangeDeckInformation();
     if(decks.findIndex((e)=>e.status=="選択中")!=-1){
     if(attacked===false){
-    if(attack==0){
-    myturn=false;
+    if(attack==0 || decks.findIndex((e)=>e.status=="選択中" && e.effect=="魔法")!=-1){
+    if(decks.findIndex((e)=>e.status=="選択中" && e.effect=="魔法")==-1){
     connection.send("関数deckWorkを実行");
+    myturn=false;
     await timer(1.25);
     turnEnd(np);
+        }else{
+        let deckWorking=decks.findIndex((e)=>e.status=="選択中" && e.effect=="魔法");
+        if(players[np].mp-decks[deckWorking].price>=0){
+            players[np].mp+=(-1)*decks[deckWorking].price;
+        connection.send("関数deckWorkを実行");
+            }else{
+            myturn=false;
+            sound("disiese");
+            turnEnd(np);
+            }
+        }
     }else{
         if(target!=mynp){
         connection.send("記憶:"+np);
@@ -869,7 +961,7 @@ function deleteDeck(index){
 function deckWork(){
     sound("select");
     for(const d of decks){
-        if(d.status=="選択中"){
+        if(d.status=="選択中" && d.owner==mynp){
         if(d.effect=="MP回復"){
             sound("heal");
             if(mynp==np){
@@ -1057,7 +1149,24 @@ function deckWork(){
                     }
                 }
             }
+            if(d.effect=="魔法"){
+                fight(d.value);
+            }
         }
+    }
+}
+function fight(atk){
+    if(target!=np){
+        connection.send("記憶:"+np);
+        connection.send(`こうげき:${atk}`);
+        connection.send("対象:"+target);
+        connection.send("進行:"+(target-1));
+        connection.send("敵:"+np);
+    }else{
+        sound("disiese");
+        players[np].hp+=(-1)*atk;
+        turnEnd(np);
+        exchangePlayerInformation();
     }
 }
 function randomTarget(){
